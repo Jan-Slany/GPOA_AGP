@@ -52,7 +52,7 @@ public class WeightedAverage {
                 // adding multiplied score to score list
                 listScore.add(multipliedScore);
             }
-
+            
         }
     }
 }
