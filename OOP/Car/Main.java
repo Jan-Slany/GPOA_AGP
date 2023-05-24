@@ -9,6 +9,6 @@ public class Main {
                 "\nKilometres driven: " + car.getKilometresDriven()
         );
 
-        System.out.printf("\nAverage consumption per 100 km: %.2f l", car.AverageFuelConsumption(100, 12400));
+        System.out.printf("\nAverage consumption per 100 km: %.2f l", car.AverageFuelConsumption(100, car.getKilometresDriven()));
     }
 }
