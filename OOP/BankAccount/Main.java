@@ -21,5 +21,8 @@ public class Main {
         // withdrawing money
         bank.Withdraw(500000,1324);
         System.out.println("Balance: " + bank.getAccountBalance() + "\n");
+    
+        // interest rate 
+        System.out.println("Interest is: " + bank.InterestRate(12000, 2, 12));
     }
 }
