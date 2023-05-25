@@ -1,52 +1,52 @@
 public class Car {
-    private String Brand;
-    private String Model;
-    private int ManufactureYear;
-    private int KilometresDriven;
+    private String brand;
+    private String model;
+    private int manufactureYear;
+    private int kilometresDriven;
 
     public Car(String brand, String model, int manYear, int kmDriven) {
-        this.Brand = brand;
-        this.Model = model;
-        this. ManufactureYear = manYear;
-        this.KilometresDriven = kmDriven;
+        this.brand = brand;
+        this.model = model;
+        this. manufactureYear = manYear;
+        this.kilometresDriven = kmDriven;
     }
 
     // setting values
     public void setBrand(String brand) {
-        Brand = brand;
+        brand = brand;
     }
 
     public void setModel(String model) {
-        Model = model;
+        model = model;
     }
 
     public void setManufactureYear(int manufactureYear) {
-        ManufactureYear = manufactureYear;
+        manufactureYear = manufactureYear;
     }
 
     public void setKilometresDriven(int kilometresDriven) {
-        KilometresDriven = kilometresDriven;
+        kilometresDriven = kilometresDriven;
     }
 
     // getting values
     public String getModel() {
-        return Model;
+        return model;
     }
 
     public String getBrand() {
-        return Brand;
+        return brand;
     }
 
     public int getManufactureYear() {
-        return ManufactureYear;
+        return manufactureYear;
     }
 
     public int getKilometresDriven() {
-        return KilometresDriven;
+        return kilometresDriven;
     }
 
     // functions
-    public double AverageFuelConsumption(double FuelUsed, double DistanceTravelled) {
-        return (FuelUsed / DistanceTravelled) * 100;
+    public double AverageFuelConsumption(double fuelUsed, double distanceTravelled) {
+        return (fuelUsed / distanceTravelled) * 100;
     }
 }
