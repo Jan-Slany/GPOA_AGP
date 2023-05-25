@@ -1,38 +1,38 @@
 public class Employee {
-    private String Name;
-    private String Position;
-    private int Salary;
+    private String name;
+    private String position;
+    private int salary;
 
     public Employee(String name, String position, int salary) {
-        this.Name = name;
-        this.Position = position;
-        this.Salary = salary;
+        this.name = name;
+        this.position = position;
+        this.salary = salary;
     }
 
     // setting values
     public void setName(String name) {
-        Name = name;
+        name = name;
     }
 
     public void setPosition(String position) {
-        Position = position;
+        position = position;
     }
 
     public void setSalary(int salary) {
-        Salary = salary;
+        salary = salary;
     }
 
     // getting values
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getPosition() {
-        return Position;
+        return position;
     }
 
     public int getSalary() {
-        return Salary;
+        return salary;
     }
 
     // functions
