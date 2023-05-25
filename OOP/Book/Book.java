@@ -1,48 +1,48 @@
 public class Book {
-    private String Name;
-    private String Author;
-    private int YearOfPublication;
-    private int NumberOfPages;
+    private String name;
+    private String author;
+    private int yearOfPublication;
+    private int numberOfPages;
 
     public Book(String name, String author, int publicationYear, int pages) {
-        this.Name = name;
-        this.Author = author;
-        this.YearOfPublication = publicationYear;
-        this.NumberOfPages = pages;
+        this.name = name;
+        this.author = author;
+        this.yearOfPublication = publicationYear;
+        this.numberOfPages = pages;
     }
 
     // setting values
     public void setName(String name) {
-        Name = name;
+        name = name;
     }
 
     public void setAuthor(String author) {
-        Author = author;
+        author = author;
     }
 
     public void setYearOfPublication(int yearOfPublication) {
-        YearOfPublication = yearOfPublication;
+        yearOfPublication = yearOfPublication;
     }
 
     public void setNumberOfPages(int numberOfPages) {
-        NumberOfPages = numberOfPages;
+        numberOfPages = numberOfPages;
     }
 
     // getting values
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getAuthor() {
-        return Author;
+        return author;
     }
 
     public int getYearOfPublication() {
-        return YearOfPublication;
+        return yearOfPublication;
     }
 
     public int getNumberOfPages() {
-        return NumberOfPages;
+        return numberOfPages;
     }
 
     // functions
