@@ -1,38 +1,38 @@
 public class Animal {
-    private String Type;
-    private String Name;
-    private double Weight;
+    private String type;
+    private String name;
+    private double weight;
 
     public Animal(String type, String name, double weight) {
-        this.Type = type;
-        this.Name = name;
-        this.Weight = weight;
+        this.type = type;
+        this.name = name;
+        this.weight = weight;
     }
 
     // setting values
     public void setType(String type) {
-        Type = type;
+        type = type;
     }
 
     public void setName(String name) {
-        Name = name;
+        name = name;
     }
 
     public void setWeight(double weight) {
-        Weight = weight;
+        weight = weight;
     }
 
     // getting values
     public String getType() {
-        return Type;
+        return type;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public double getWeight() {
-        return Weight;
+        return weight;
     }
 
     // functions
