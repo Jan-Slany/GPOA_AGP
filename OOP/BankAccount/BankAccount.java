@@ -1,51 +1,51 @@
 public class BankAccount {
-    private int AccountNumber;
-    private String AccountOwner;
-    private int AccountBalance;
+    private int accountNumber;
+    private String accountOwner;
+    private int accountBalance;
 
     public BankAccount(int num, String owner, int balance) {
-        this.AccountNumber = num;
-        this.AccountOwner = owner;
-        this.AccountBalance = balance;
+        this.accountNumber = num;
+        this.accountOwner = owner;
+        this.accountBalance = balance;
     }
 
     // setting values
     public void setAccountNumber(int accountNumber) {
-        AccountNumber = accountNumber;
+        accountNumber = accountNumber;
     }
 
     public void setAccountOwner(String accountOwner) {
-        AccountOwner = accountOwner;
+        accountOwner = accountOwner;
     }
 
     public void setAccountBalance(int accountBalance) {
-        AccountBalance = accountBalance;
+        accountBalance = accountBalance;
     }
 
     // getting values
     public int getAccountNumber() {
-        return AccountNumber;
+        return accountNumber;
     }
 
     public String getAccountOwner() {
-        return AccountOwner;
+        return accountOwner;
     }
 
     public int getAccountBalance() {
-        return AccountBalance;
+        return accountBalance;
     }
 
     // functions
     // requiring account number to verify bank account
-    public int Deposit(int amount, int AccountNum) {
-        if (this.AccountNumber == AccountNum) return this.AccountBalance += amount;
-        else return this.AccountBalance;
+    public int Deposit(int amount, int accountNum) {
+        if (this.accountNumber == accountNum) return this.accountBalance += amount;
+        else return this.accountBalance;
     }
 
     // requiring account number to verify bank account
-    public int Withdraw(int amount, int AccountNum) {
-        if (this.AccountNumber == AccountNum) return this.AccountBalance -= amount;
-        else return this.AccountBalance;
+    public int Withdraw(int amount, int accountNum) {
+        if (this.accountNumber == accountNum) return this.accountBalance -= amount;
+        else return this.accountBalance;
     }
     
     // interest rate 
