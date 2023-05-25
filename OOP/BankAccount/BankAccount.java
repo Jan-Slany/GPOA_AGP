@@ -47,4 +47,9 @@ public class BankAccount {
         if (this.AccountNumber == AccountNum) return this.AccountBalance -= amount;
         else return this.AccountBalance;
     }
+    
+    // interest rate 
+    public double InterestRate(int amount, double rate, int time) {     
+        return (amount * rate * time) / 100;
+    }
 }
