@@ -1,38 +1,38 @@
 public class Product {
-    private String Name;
-    private double Price;
-    private int PiecesInStock;
+    private String name;
+    private double price;
+    private int PpiecesInStock;
 
     public Product(String name, double price, int inStock){
-        this.Name = name;
-        this.Price = price;
-        this.PiecesInStock = inStock;
+        this.name = name;
+        this.price = price;
+        this.piecesInStock = inStock;
     }
 
     // setting values
     public void setName(String name) {
-        Name = name;
+        name = name;
     }
 
     public void setPrice(double price) {
-        Price = price;
+        price = price;
     }
 
     public void setPiecesInStock(int piecesInStock) {
-        PiecesInStock = piecesInStock;
+        piecesInStock = piecesInStock;
     }
 
     // getting values
     public String getName() {
-        return Name;
+        return name;
     }
 
     public double getPrice() {
-        return Price;
+        return price;
     }
 
     public int getPiecesInStock() {
-        return PiecesInStock;
+        return piecesInStock;
     }
 
     // functions
