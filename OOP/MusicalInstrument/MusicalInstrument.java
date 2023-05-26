@@ -1,38 +1,38 @@
 public class MusicalInstrument {
-    private String Type;
-    private String Brand;
-    private double Price;
+    private String type;
+    private String brand;
+    private double price;
 
     public MusicalInstrument(String type, String brand, double price) {
-        this.Type = type;
-        this.Brand = brand;
-        this.Price = price;
+        this.type = type;
+        this.brand = brand;
+        this.price = price;
     }
 
     // setting values
     public void setType(String type) {
-        Type = type;
+        type = type;
     }
 
     public void setBrand(String brand) {
-        Brand = brand;
+        brand = brand;
     }
 
     public void setPrice(double price) {
-        Price = price;
+        price = price;
     }
 
     // getting values
     public String getType() {
-        return Type;
+        return type;
     }
 
     public String getBrand() {
-        return Brand;
+        return brand;
     }
 
     public double getPrice() {
-        return Price;
+        return price;
     }
 
     // functions
