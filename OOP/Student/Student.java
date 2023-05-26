@@ -1,48 +1,48 @@
 public class Student {
-  private String FirstName;
-  private String LastName;
-  private int BirthDate;
-  private double AverageMark;
+  private String firstName;
+  private String lastName;
+  private int birthDate;
+  private double averageMark;
 
   public Student(String first, String last, int birth, double averageMark) {
-    this.FirstName = first;
-    this.LastName = last;
-    this.BirthDate = birth;
-    this.AverageMark = averageMark;
+    this.firstName = first;
+    this.lastName = last;
+    this.birthDate = birth;
+    this.averageMark = averageMark;
   }
 
   // setting values
   public void setFirstName(String firstName) {
-    FirstName = firstName;
+    firstName = firstName;
   }
 
   public void setLastName(String lastName) {
-    LastName = lastName;
+    lastName = lastName;
   }
 
   public void setBirthDate(int birthDate) {
-    BirthDate = birthDate;
+    birthDate = birthDate;
   }
 
   public void setAverageMark(double averageMark) {
-    AverageMark = averageMark;
+    averageMark = averageMark;
   }
 
   // getting values
   public String getFirstName() {
-    return FirstName;
+    return firstName;
   }
 
   public String getLastName() {
-    return LastName;
+    return lastName;
   }
 
   public int getBirthDate() {
-    return BirthDate;
+    return birthDate;
   }
 
   public double getAverageMark() {
-    return AverageMark;
+    return averageMark;
   }
 
   // functions
