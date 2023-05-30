@@ -1,8 +1,18 @@
+import java.util.Calendar;
+
 public class Car {
     private String brand;
     private String model;
     private int manufactureYear;
     private int kilometresDriven;
+
+
+    public Car(String brand, String model) {
+        this.brand = brand;
+        this.model = model;
+        this. manufactureYear = Calendar.getInstance().get(Calendar.YEAR);
+        this.kilometresDriven = 0;
+    }
 
     public Car(String brand, String model, int manYear, int kmDriven) {
         this.brand = brand;
@@ -48,5 +58,13 @@ public class Car {
     // functions
     public double AverageFuelConsumption(double fuelUsed, double distanceTravelled) {
         return (fuelUsed / distanceTravelled) * 100;
+    }
+
+    @Override
+    public String toString() {
+        return  "Car brand: " + this.getBrand() +
+                "\nCar model: " + this.getModel() +
+                "\nYear of manufacture: " + this.getManufactureYear() +
+                "\nKilometres driven: " + this.getKilometresDriven();
     }
 }
