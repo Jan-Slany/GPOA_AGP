@@ -1,6 +1,6 @@
 public class Person {
-    private String firstname;
-    private String lastname;
+    public String firstname;
+    public String lastname;
     private int age;
 
     public Person(String firstname, String lastname) {
@@ -45,6 +45,8 @@ public class Person {
     public int Birthday() {
         return age += 1;
     }
+
+    public String FullName() { return this.getFirstname() + " " + this.getLastname(); }
 
     @Override
     public String toString() {
