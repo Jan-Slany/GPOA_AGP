@@ -1,12 +1,20 @@
 public class BankAccount {
     private int accountNumber;
-    private String accountOwner;
     private int accountBalance;
+    private String person;
 
-    public BankAccount(int num, String owner, int balance) {
+    public BankAccount(int num, Person owner, int balance) {
         this.accountNumber = num;
-        this.accountOwner = owner;
+        // getting full name from person class
+        this.person = owner.FullName();
         this.accountBalance = balance;
+    }
+
+    public BankAccount(int num, Person owner) {
+        this.accountNumber = num;
+        this.person = owner.FullName();
+        // setting account balance to default value
+        this.accountBalance = 0;
     }
 
     // setting values
@@ -28,7 +36,7 @@ public class BankAccount {
     }
 
     public String getAccountOwner() {
-        return accountOwner;
+        return person;
     }
 
     public int getAccountBalance() {
@@ -47,9 +55,16 @@ public class BankAccount {
         if (this.accountNumber == accountNum) return this.accountBalance -= amount;
         else return this.accountBalance;
     }
-    
-    // interest rate 
-    public double InterestRate(int amount, double rate, int time) {     
+
+    // interest rate
+    public double InterestRate(int amount, double rate, int time) {
         return (amount * rate * time) / 100;
+    }
+
+    @Override
+    public String toString() {
+        return "Account number: " + this.getAccountNumber() +
+                "\nOwner: " + this.getAccountOwner() +
+                "\nBalance: " + this.getAccountBalance() + "\n";
     }
 }
