@@ -1,70 +1,41 @@
-public class BankAccount {
-    private int accountNumber;
-    private int accountBalance;
-    private String person;
+public class Main {
+    public static void main(String[] args) {
+        // declaring new bank account
+        Person person = new Person("Jan", "Slaný");
+        BankAccount myAccount = new BankAccount(1324, person);
 
-    public BankAccount(int num, Person owner, int balance) {
-        this.accountNumber = num;
-        // getting full name from person class
-        this.person = owner.FullName();
-        this.accountBalance = balance;
-    }
+        // all account details
+        System.out.println(myAccount);
 
-    public BankAccount(int num, Person owner) {
-        this.accountNumber = num;
-        this.person = owner.FullName();
-        // setting account balance to default value
-        this.accountBalance = 0;
-    }
+        // if you type correct account number, the transaction will progress
+        myAccount.Deposit(1000000, 1324);
+        System.out.println("Balance: " + myAccount.getAccountBalance() + "\n");
 
-    // setting values
-    public void setAccountNumber(int accountNumber) {
-        accountNumber = accountNumber;
-    }
+        // if type incorrect, nothing will happen
+        myAccount.Deposit(1000000, 1224);
+        System.out.println("Balance: " + myAccount.getAccountBalance() + "\n");
 
-    public void setAccountOwner(String accountOwner) {
-        accountOwner = accountOwner;
-    }
+        // withdrawing money
+        myAccount.Withdraw(500000,1324);
+        System.out.println("Balance: " + myAccount.getAccountBalance() + "\n");
 
-    public void setAccountBalance(int accountBalance) {
-        accountBalance = accountBalance;
-    }
+        // interest rate
+        System.out.println("Interest is: " + myAccount.InterestRate(12000, 2, 12));
 
-    // getting values
-    public int getAccountNumber() {
-        return accountNumber;
-    }
+        // creating new bank account with account number 123456
+        Person owner = new Person("Unknown", "User");
+        BankAccount user = new BankAccount(123456, owner);
 
-    public String getAccountOwner() {
-        return person;
-    }
+        // printing account details of account 123456
+        System.out.println(user);
 
-    public int getAccountBalance() {
-        return accountBalance;
-    }
 
-    // functions
-    // requiring account number to verify bank account
-    public int Deposit(int amount, int accountNum) {
-        if (this.accountNumber == accountNum) return this.accountBalance += amount;
-        else return this.accountBalance;
-    }
+        // setting address
+        Address address = new Address("Beautiful", 3, "Beautiful city", 3642);
 
-    // requiring account number to verify bank account
-    public int Withdraw(int amount, int accountNum) {
-        if (this.accountNumber == accountNum) return this.accountBalance -= amount;
-        else return this.accountBalance;
-    }
+        // printing info about bank
+        BankAccount bank = new BankAccount("Czech Saving Bank", address.FullAddress());
 
-    // interest rate
-    public double InterestRate(int amount, double rate, int time) {
-        return (amount * rate * time) / 100;
-    }
-
-    @Override
-    public String toString() {
-        return "Account number: " + this.getAccountNumber() +
-                "\nOwner: " + this.getAccountOwner() +
-                "\nBalance: " + this.getAccountBalance() + "\n";
+        System.out.println(bank.BankInfo());
     }
 }
