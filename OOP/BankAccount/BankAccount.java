@@ -1,41 +1,92 @@
-public class Main {
-    public static void main(String[] args) {
-        // declaring new bank account
-        Person person = new Person("Jan", "Slaný");
-        BankAccount myAccount = new BankAccount(1324, person);
+public class BankAccount {
+    private int accountNumber;
+    private int accountBalance;
+    private String bankName;
+    private int[] accounts;
+    private String person;
+    private String address;
 
-        // all account details
-        System.out.println(myAccount);
+    public BankAccount(int num, Person owner, int balance) {
+        this.accountNumber = num;
+        // getting full name from person class
+        this.person = owner.FullName();
+        this.accountBalance = balance;
+    }
 
-        // if you type correct account number, the transaction will progress
-        myAccount.Deposit(1000000, 1324);
-        System.out.println("Balance: " + myAccount.getAccountBalance() + "\n");
+    public BankAccount(int num, Person owner) {
+        this.accountNumber = num;
+        this.person = owner.FullName();
+        // setting account balance to default value
+        this.accountBalance = 0;
+    }
 
-        // if type incorrect, nothing will happen
-        myAccount.Deposit(1000000, 1224);
-        System.out.println("Balance: " + myAccount.getAccountBalance() + "\n");
+    public BankAccount(String bankName, String address) {
+        this.bankName = bankName;
+        // getting address from address class
+        this.address = address;
+    }
 
-        // withdrawing money
-        myAccount.Withdraw(500000,1324);
-        System.out.println("Balance: " + myAccount.getAccountBalance() + "\n");
+    // setting values
+    public void setAccountNumber(int accountNumber) {
+        accountNumber = accountNumber;
+    }
 
-        // interest rate
-        System.out.println("Interest is: " + myAccount.InterestRate(12000, 2, 12));
+    public void setAccountOwner(String accountOwner) {
+        accountOwner = accountOwner;
+    }
 
-        // creating new bank account with account number 123456
-        Person owner = new Person("Unknown", "User");
-        BankAccount user = new BankAccount(123456, owner);
+    public void setAccountBalance(int accountBalance) {
+        accountBalance = accountBalance;
+    }
 
-        // printing account details of account 123456
-        System.out.println(user);
+    public void setBankName(String bankName) {
+        this.bankName = bankName;
+    }
 
+    // getting values
+    public int getAccountNumber() {
+        return accountNumber;
+    }
 
-        // setting address
-        Address address = new Address("Beautiful", 3, "Beautiful city", 3642);
+    public String getAccountOwner() {
+        return person;
+    }
 
-        // printing info about bank
-        BankAccount bank = new BankAccount("Czech Saving Bank", address.FullAddress());
+    public int getAccountBalance() {
+        return accountBalance;
+    }
 
-        System.out.println(bank.BankInfo());
+    public String getBankName() {
+        return bankName;
+    }
+
+    // functions
+    // requiring account number to verify bank account
+    public int Deposit(int amount, int accountNum) {
+        if (this.accountNumber == accountNum) return this.accountBalance += amount;
+        else return this.accountBalance;
+    }
+
+    // requiring account number to verify bank account
+    public int Withdraw(int amount, int accountNum) {
+        if (this.accountNumber == accountNum) return this.accountBalance -= amount;
+        else return this.accountBalance;
+    }
+
+    // interest rate
+    public double InterestRate(int amount, double rate, int time) {
+        return (amount * rate * time) / 100;
+    }
+
+    public String BankInfo() {
+        return "Bank name: " + this.getBankName() +
+                "\nAddress: " + this.address;
+    }
+
+    @Override
+    public String toString() {
+        return "Account number: " + this.getAccountNumber() +
+                "\nOwner: " + this.getAccountOwner() +
+                "\nBalance: " + this.getAccountBalance() + "\n";
     }
 }
