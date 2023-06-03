@@ -46,6 +46,10 @@ public class Address {
     }
 
     // functions
+    public String FullAddress() {
+        return street + " " + houseNumber + ", " + city + " " + zipCode;
+    }
+
     @Override
     public String toString() {
         return "Street: " + street + "\nHouse number: " + houseNumber + "\nCity: " + city + "\nZip code: " + zipCode;
