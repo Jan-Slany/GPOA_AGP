@@ -1,5 +1,9 @@
 package package_PP;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public class Person {
     // implementujte 3 atributy: RČ, Jméno, Bydliště (město stačí), Věk
 
@@ -56,11 +60,18 @@ public class Person {
     // implementujte metodu toSting, ta bude vracet řetězec ve formátu: "Jméno: attr_name; Bydliště: attr_homeTown; Věk: attr_age"
     @Override
     public String toString(){
-        if (this.address != null) {
-            return "Jméno: " + this.name + "\nBydliště: " + this.address + "\nVěk: " + this.age + "\n";
-        }
+        // setting date format to check is date is valid
+        String dateFormat = "MMdd";
 
-        else return "Uživatel " + this.getName() + " není validní\n";
+        try {
+            SimpleDateFormat validDate = new SimpleDateFormat(dateFormat);
+            validDate.setLenient(false);
+            validDate.parse(this.birthNumber.substring(2,6));
+        }
+        catch (ParseException | IllegalArgumentException e) {
+            return "Uživatel " + this.getName() + " nemá validní RČ\n";
+        }
+        return "Jméno: " + this.name + "\nBydliště: " + this.address + "\nVěk: " + this.age + "\n";
     }
 
 
