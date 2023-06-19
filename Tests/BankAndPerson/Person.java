@@ -2,7 +2,6 @@ package package_PP;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 
 public class Person {
     // implementujte 3 atributy: RČ, Jméno, Bydliště (město stačí), Věk
@@ -18,15 +17,15 @@ public class Person {
         this.birthNumber = birthNumber;
         this.name = name;
         this.address = address;
-        
+
         // by Fabjjn
         if (Integer.parseInt(birthNumber.substring(0,2)) < 23) {
-            if (Integer.parseInt(birthNumber.substring(2,4)) > 6) Age = 23 - Integer.parseInt(birthNumber.substring(0,2)) - 1;
-            else Age = 23 - Integer.parseInt(birthNumber.substring(0,2));
+            if (Integer.parseInt(birthNumber.substring(2,4)) > 6) age = 23 - Integer.parseInt(birthNumber.substring(0,2)) - 1;
+            else age = 23 - Integer.parseInt(birthNumber.substring(0,2));
         }
         else {
-            if (Integer.parseInt(birthNumber.substring(2,4)) > 6) Age = 123 - Integer.parseInt(birthNumber.substring(0,2)) - 1;
-            else Age = 123 - Integer.parseInt(birthNumber.substring(0,2));
+            if (Integer.parseInt(birthNumber.substring(2,4)) > 6) age = 123 - Integer.parseInt(birthNumber.substring(0,2)) - 1;
+            else age = 123 - Integer.parseInt(birthNumber.substring(0,2));
         }
     }
 
