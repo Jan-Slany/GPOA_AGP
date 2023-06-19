@@ -21,7 +21,7 @@ public class Person {
         // by Fabjjn
         int year = Integer.parseInt(birthNumber.substring(0,2));
         int month = Integer.parseInt(birthNumber.substring(0,2));
-        
+
         if (year < 23) {
             if (month > 6) age = 23 - year - 1;
             else age = 23 - month;
@@ -76,9 +76,9 @@ public class Person {
             validDate.parse(this.birthNumber.substring(2,6));
         }
         catch (ParseException | IllegalArgumentException e) {
-            return "Uživatel " + this.getName() + " nemá validní RČ\n";
+            return "Uživatel " + this.getName() + " nemá validní RČ";
         }
-        return "Jméno: " + this.name + "\nBydliště: " + this.address + "\nVěk: " + this.age + "\n";
+        return "Jméno: " + this.name + " Bydliště: " + this.address + " Věk: " + this.age;
     }
 
 
