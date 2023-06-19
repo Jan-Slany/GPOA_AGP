@@ -19,13 +19,16 @@ public class Person {
         this.address = address;
 
         // by Fabjjn
-        if (Integer.parseInt(birthNumber.substring(0,2)) < 23) {
-            if (Integer.parseInt(birthNumber.substring(2,4)) > 6) age = 23 - Integer.parseInt(birthNumber.substring(0,2)) - 1;
-            else age = 23 - Integer.parseInt(birthNumber.substring(0,2));
+        int year = Integer.parseInt(birthNumber.substring(0,2));
+        int month = Integer.parseInt(birthNumber.substring(0,2));
+        
+        if (year < 23) {
+            if (month > 6) age = 23 - year - 1;
+            else age = 23 - month;
         }
         else {
-            if (Integer.parseInt(birthNumber.substring(2,4)) > 6) age = 123 - Integer.parseInt(birthNumber.substring(0,2)) - 1;
-            else age = 123 - Integer.parseInt(birthNumber.substring(0,2));
+            if (month > 6) age = 123 - year - 1;
+            else age = 123 - year;
         }
     }
 
