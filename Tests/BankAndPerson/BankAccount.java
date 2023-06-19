@@ -1,5 +1,7 @@
 package package_PP;
 
+import java.util.Random;
+
 public class BankAccount {
     // implementujte 3 atributy: číslo účtu, osoba (objekt třídy Person), zůstatek
     private long accountNumber;
@@ -13,7 +15,7 @@ public class BankAccount {
     public BankAccount(Person person){
         // getting person name
         this.person = person.getName();
-        this.accountNumber = (int)(Math.random() * 10000 + 99999);
+        this.accountNumber = new Random().nextInt(900000) + 100000;
         this.balance = 0;
         // getting address value
         this.address = person.getAddress();
@@ -25,7 +27,7 @@ public class BankAccount {
         // getting person name
         this.person = person.getName();
         this.balance = balance;
-        this.accountNumber = (int)(Math.random() * 100000 + 999999);
+        this.accountNumber = new Random().nextInt(900000) + 100000;
         // getting address value
         this.address = person.getAddress();
     }
