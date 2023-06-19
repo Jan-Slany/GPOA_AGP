@@ -20,7 +20,7 @@ public class Person {
 
         // by Fabjjn
         int year = Integer.parseInt(birthNumber.substring(0,2));
-        int month = Integer.parseInt(birthNumber.substring(0,2));
+        int month = Integer.parseInt(birthNumber.substring(2,4));
 
         if (year < 23) {
             if (month > 6) age = 23 - year - 1;
