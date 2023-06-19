@@ -62,10 +62,7 @@ public class BankAccount {
     // "Jméno: attr_osoba.name; Bydliště: attr_osoba.homeTown; Číslo účtu: attr_accNumber; Zůstatek: attr_balance"
     @Override
     public String toString() {
-        return "Jméno: " + this.getPerson() +
-                "\nBydliště: " + this.getAddress() +
-                "\nČíslo účtu: " + this.getAccountNumber() +
-                "\nZůstatek: " + this.getBalance() + "\n";
+        return "Jméno: " + this.getPerson() + " Bydliště: " + this.getAddress() + " Číslo účtu: " + this.getAccountNumber() + " Zůstatek: " + this.getBalance();
     }
 
     // implementujte metodu pro vklad peněz na účet s parametrem: částka. Maximální vklad je 10 000,- -> Ošetřete.
