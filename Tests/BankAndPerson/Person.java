@@ -18,11 +18,23 @@ public class Person {
         this.birthNumber = birthNumber;
         this.name = name;
         this.address = address;
-
-        if (Integer.parseInt(birthNumber.substring(0,2)) > 23) {
-            this.age = 123 - Integer.parseInt(birthNumber.substring(0,2));
+        
+        // by Fabjjn
+        if(Integer.parseInt(birthNumber.substring(0,2)) < 23){
+            if(Integer.parseInt(birthNumber.substring(2,4)) > 6) {
+                Age = 23 - Integer.parseInt(birthNumber.substring(0,2)) - 1;
+            }
+            else{
+                Age = 23 - Integer.parseInt(birthNumber.substring(0,2));
+            }
         }
-        else this.age = 23 - Integer.parseInt(birthNumber.substring(0,2));
+        else {
+            if (Integer.parseInt(birthNumber.substring(2,4)) > 6) {
+                Age = 123 - Integer.parseInt(birthNumber.substring(0,2)) - 1;
+            } else {
+                Age = 123 - Integer.parseInt(birthNumber.substring(0,2));
+            }
+        }
     }
 
     // implementujte get a set pro atributy, uvědomte si které lze měnit
